@@ -10,5 +10,5 @@
 
 <br><br>
 <form method="get" action="/cocktails/new">
-    <button type="submit" class="btn btn-primary">Enter a new cocktail!</button>
+    <button type="submit" class="btn btn-info">Enter a new cocktail!</button>
 </form>
