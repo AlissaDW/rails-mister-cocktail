@@ -3,7 +3,7 @@
 
 <ul>
   <% @cocktails.each do |cockt| %>
-    <li><%= cockt.name %>   <%= link_to "show", cocktail_path(cockt)%></li>
+    <li><%= cockt.name %>   <%= link_to "show", cocktail_path(cockt)%> <%= link_to "delete", cocktail_path(cockt), method: :delete %></li>
   <% end %>
 </ul>
 

@@ -7,5 +7,7 @@
 </ul>
 
 
-<p><%= link_to "add an ingredient", new_cocktail_dose_path(@cocktail) %></p>
+<p><%= button_to "add an ingredient", new_cocktail_dose_path(@cocktail), method: :get,class: 'btn btn-primary' %></p>
+
+<p><%= button_to "return to the list", cocktails_path, method: :get,class: 'btn btn-primary' %></p>
 

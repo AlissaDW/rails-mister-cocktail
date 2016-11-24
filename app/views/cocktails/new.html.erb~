@@ -5,10 +5,11 @@
    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
    <%= simple_form_for @cocktail do |f| %>
        <%= f.input :name, placeholder: "Name of the cocktail"%>
-       <%= f.input :ingredients, collection: Ingredient::NAMES, prompt: "Choose one"  %>
-       <%= f.input :doses, as: :string, placeholder: "ingredients doses." %>
+       
        <%= f.submit "Go", class: "btn btn-primary" %>
    <% end %>
+
+<p><%= button_to "return to the list", cocktails_path, method: :get,class: 'btn btn-info btn-xs' %></p>
    </div>
   </div>
 </div>

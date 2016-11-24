@@ -6,9 +6,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <img src="/app/assets/images/cocktail.jpg" />
+  </a>
+
+
+
+
+</div>
+<div class="container text-center">
     <%= yield %>
+</div>
   </body>
 </html>
+
