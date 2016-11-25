@@ -14,14 +14,14 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
-    <img src="/app/assets/images/cocktail.jpg" />
+      <%= cl_image_tag("kuotnmzjiejai1sorowc.jpg") %>
   </a>
 
-
+  <a href="/" class="navbar-wagon-item navbar-wagon-button btn">Return to the list</a>
 
 
 </div>
-<div class="container text-center">
+<div class="container">
     <%= yield %>
 </div>
   </body>

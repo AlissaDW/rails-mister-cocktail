@@ -1,4 +1,11 @@
-<h2><%= @cocktail.name %></h2>
+<h2><%= @cocktail.name %> </h2>
+
+
+<% if @cocktail.photo.present? %>
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+<% else %>
+  <%= cl_image_tag("kuotnmzjiejai1sorowc.jpg", width: 400, :crop=>"scale") %>
+<% end %>
 
 <ul>
   <% @cocktail.doses.each do |dose| %>
@@ -9,5 +16,5 @@
 
 <p><%= button_to "add an ingredient", new_cocktail_dose_path(@cocktail), method: :get,class: 'btn btn-primary' %></p>
 
-<p><%= button_to "return to the list", cocktails_path, method: :get,class: 'btn btn-primary' %></p>
+
 
