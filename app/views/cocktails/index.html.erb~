@@ -1,14 +1,27 @@
 <h1>All the cocktails:</h1>
 
-
-<ul>
+<div class="container">
+  <div class="row">
   <% @cocktails.each do |cockt| %>
-    <li><%= cockt.name %>   <%= link_to "show", cocktail_path(cockt)%></li>
+    <div class="col-xs-12 col-sm-4">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cockt.photo.present? ? cl_image_path(cockt.photo) : cl_image_path('kuotnmzjiejai1sorowc.jpg') %>');">
+  <div class="card-description">
+    <h2><%= cockt.name %></h2>
+    <p><%= link_to "show", cocktail_path(cockt), class: "btn btn-primary"%> <%= link_to "delete", cocktail_path(cockt), method: :delete, class: "btn btn-primary btn-xs" %></p>
+  </div>
+</div>
+</div>
   <% end %>
-</ul>
-
+</div>
+</div>
 
 <br><br>
 <form method="get" action="/cocktails/new">
     <button type="submit" class="btn btn-primary">Enter a new cocktail!</button>
 </form>
+
+
+
+
+
+
